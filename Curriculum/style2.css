@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@100&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--negro-dark);
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+	--blanco: #F2E4DB;
+	--azull: #3A969D;
+	--azul: #3498db;
+	--verde: #758E84;
+	--gris: #696762;
+	--negro: #38383D;
+}
+
+:root {
+	--blanco-dark: #ececec; /* Blanco para el modo oscuro */
+	--negro-dark: #1a1a1a; /* Negro para el fondo del modo oscuro */
+	--gris-dark: #333; /* Gris oscuro */
+	--rojo-dark: #800000; /* Rojo oscuro */
+}
+h1 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: var(--blanco-dark);
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+td {
+    font-family: 'Lora', serif;
+	font-weight: 500;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: var(--gris-dark);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+table, th, td {
+    border: 1px solid var(--blanco-dark);
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    color: var(--blanco-dark);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+td:nth-child(odd) {
+    background-color: var(--gris-dark);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+button {
+    background-color: #3498db; /* Azul claro */
+    color: var(--blanco-dark);
+    padding: 0.5rem 1rem;
+	font-family: 'Lora', serif;
+	font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(to right, var(--azul), var(--azull)); /* Efecto de degradado con verde oscuro hacia azul claro */
+    transform: scale(1.1);
+}
